@@ -13,6 +13,8 @@
           :post="post"
         />
       </div>
+    <button class="reset-button" @click="resetLikes">Reset likes</button>  
+
     </main>
 
     <!-- Footer -->
@@ -21,7 +23,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import PostCard from "../components/PostCard.vue";
@@ -31,10 +33,18 @@ export default {
 
   computed: {
     ...mapState(["posts"])
+  },
+
+  methods: {
+    ...mapActions(['resetAllLikes']),
+    resetLikes() {
+      this.resetAllLikes(); 
+    }
   }
 };
-</script>
 
+
+</script>
 <style>
 .main-container {
   display: flex;
@@ -58,5 +68,13 @@ export default {
   gap: 20px;
   max-width: 600px;   
   margin: 0 auto;     
+}
+
+.reset-button {
+  background-color: black;
+}
+
+.reset-button:hover {
+  background-color: #333;   /* veidi heledam hover efekt */
 }
 </style>
