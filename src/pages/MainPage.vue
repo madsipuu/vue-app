@@ -53,8 +53,10 @@ export default {
 }
 
 .posts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+  max-width: 600px;   
+  margin: 0 auto;     
 }
 </style>
