@@ -21,22 +21,45 @@ export default {
 </script>
 
 <style>
-
-
-
 .post-card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
-  background: rgb(0, 0, 0);
+  border: 1px solid #ffffff;  /* ← Muuda valgeks */
+  padding: 25px;
+  border-radius: 15px;
+  background: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.post-card h3 {
+  color: #ffffff;  /* Valge pealkiri */
+  margin-top: 0;
+}
+
+.post-card p {
+  color: #cccccc;  /* Heledam hall tekst */
 }
 
 .post-card img {
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
+  margin: 15px 0;  /* Õhk ümber pildi */
 }
-.likes { font-weight: 600; color: rgb(255, 255, 255); margin-left: 10px; }
-button { padding: 6px 10px; border-radius: 6px; border: 1px solid #bbb; background: #f5f5f8 }
 
+.likes { 
+  font-weight: 600; 
+  color: rgb(255, 255, 255); 
+  margin-left: 10px; 
+}
+
+button { 
+  padding: 8px 12px; 
+  border-radius: 6px; 
+  border: 1px solid #bbb; 
+  background: #f5f5f8;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e0e0e0;
+}
 </style>

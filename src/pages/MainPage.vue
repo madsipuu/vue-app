@@ -44,8 +44,12 @@ export default {
 };
 
 
+
 </script>
 <style>
+
+
+
 .main-container {
   display: flex;
   flex-direction: column;
